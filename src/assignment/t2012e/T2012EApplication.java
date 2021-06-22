@@ -9,23 +9,30 @@ import java.util.Scanner;
 
 public class T2012EApplication {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        StudentMenu menuStudent = new StudentMenu();
-        TeacherMenu menuTeacher = new TeacherMenu();
-        System.out.println("Choose one of two management programs: ");
-        System.out.println("1. Student Manager.");
-        System.out.println("2. Teacher Manager.");
-        int choice = scanner.nextInt();
-        scanner.nextLine();
-        switch (choice) {
-            case 1:
-                menuStudent.generateStudentMenu();
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            StudentMenu menuStudent = new StudentMenu();
+            TeacherMenu menuTeacher = new TeacherMenu();
+            System.out.println("Choose one of two management programs: ");
+            System.out.println("1. Student Manager.");
+            System.out.println("2. Teacher Manager.");
+            System.out.println("3. Exit");
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+            switch (choice) {
+                case 1:
+                    menuStudent.generateStudentMenu();
+                    break;
+                case 2:
+                    menuTeacher.generateTeacherMenu();
+                    break;
+                default:
+                    break;
+            }
+            if (choice == 3){
                 break;
-            case 2:
-                menuTeacher.generateTeacherMenu();
-                break;
+            }
         }
-
     }
 }
 
