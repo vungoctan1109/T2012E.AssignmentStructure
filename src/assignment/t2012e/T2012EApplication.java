@@ -26,6 +26,9 @@ public class T2012EApplication {
                 case 2:
                     menuTeacher.generateTeacherMenu();
                     break;
+                case 3:
+                    System.out.println("Bye bye");
+                    break;
                 default:
                     break;
             }

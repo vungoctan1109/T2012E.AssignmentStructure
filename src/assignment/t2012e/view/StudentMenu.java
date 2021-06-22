@@ -40,7 +40,7 @@ public class StudentMenu {
                     studentController.searchByRollNumber();
                     break;
                 case 0:
-                    System.out.println("Bye bye");
+                    System.out.println("Back to select manager menu.");
                     break;
                 default:
                     break;
